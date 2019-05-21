@@ -66,30 +66,35 @@ public class Main {
             case "fire":
                 if(userChakra == "wind" || userChakra == "lightning") {
                     cpuPoints++;
+                    System.out.println("Defeat");
                 }
                 break;
 
             case "wind":
                 if (userChakra == "lightning" || userChakra == "earth") {
                     cpuPoints++;
+                    System.out.println("Defeat");
                 }
                 break;
 
             case "lightning":
                 if (userChakra == "earth" || userChakra == "water") {
                     cpuPoints++;
+                    System.out.println("Defeat");
                 }
                 break;
 
             case "earth":
                 if (userChakra == "water" || userChakra == "fire") {
                     cpuPoints++;
+                    System.out.println("Defeat");
                 }
                 break;
 
             case "water":
                 if (userChakra == "fire" || userChakra == "wind") {
                     cpuPoints++;
+                    System.out.println("Defeat");
                 }
                 break;
         }
@@ -100,30 +105,35 @@ public class Main {
             case "fire":
                 if(cpuChakra == "wind" || cpuChakra == "lightning") {
                     userPoints++;
+                    System.out.println("Victory");
                 }
                 break;
 
             case "wind":
                 if (cpuChakra == "lightning" || cpuChakra == "earth") {
                     userPoints++;
+                    System.out.println("Victory");
                 }
                 break;
 
             case "lightning":
                 if (cpuChakra == "earth" || cpuChakra == "water") {
                     userPoints++;
+                    System.out.println("Victory");
                 }
                 break;
 
             case "earth":
                 if (cpuChakra == "water" || cpuChakra == "fire") {
                     userPoints++;
+                    System.out.println("Victory");
                 }
                 break;
 
             case "water":
                 if (cpuChakra == "fire" || cpuChakra == "wind") {
                     userPoints++;
+                    System.out.println("Victory");
                 }
                 break;
         }
