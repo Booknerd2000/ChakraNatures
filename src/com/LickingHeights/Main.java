@@ -6,8 +6,8 @@ public class Main {
         Scanner keyboard;
         keyboard = new Scanner(System.in);
 
-        int cpu;
-        String cpuChakra;
+        int cpu,user;
+        String cpuChakra, userChakra;
 
         String[] chakra = new String[5];
         chakra[0] = "fire";
@@ -18,13 +18,17 @@ public class Main {
 
         cpu = (int) (Math.random() * 5);
         cpuChakra = chakra[cpu];
-
-
         System.out.println(cpuChakra);
+
+        System.out.println("Fire = 0 \nWind = 1 \nLightning = 2\nEarth = 3\nWater = 4\n");
+        user = keyboard.nextInt();
+        userChakra = chakra[user];
+        System.out.println();
+
 
         switch(cpuChakra){
             case "fire":
-                
+                if()
                 break;
             case "wind":
 
