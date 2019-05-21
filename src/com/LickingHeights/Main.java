@@ -6,11 +6,14 @@ public class Main {
         Scanner keyboard;
         keyboard = new Scanner(System.in);
 
-        int cpu,user,cpuPoints,userPoints;
+        int cpu,user,cpuPoints,userPoints,restart;
         cpuPoints = 0;
         userPoints = 0;
 
         String cpuChakra, userChakra;
+
+        boolean gameLoop=true;
+        boolean mainLoop=true;
 
         String[] chakra = new String[5];
         chakra[0] = "fire";
@@ -21,20 +24,39 @@ public class Main {
 
         System.out.println("Fire = 0 \nWind = 1 \nLightning = 2\nEarth = 3\nWater = 4\n");
 
-        while(true){
-            cpu = (int) (Math.random() * 5);
-            cpuChakra = chakra[cpu];
-            System.out.println(cpuChakra);
+        while(mainLoop){
+            while(gameLoop){
+                cpu = (int) (Math.random() * 5);
+                cpuChakra = chakra[cpu];
+                System.out.println(cpuChakra);
 
-            user = keyboard.nextInt();
-            userChakra = chakra[user];
-            System.out.println(userChakra);
+                user = keyboard.nextInt();
+                userChakra = chakra[user];
+                System.out.println(userChakra);
 
-            cpuWin(cpuChakra,userChakra,cpuPoints);
-            cpuLose(userChakra,cpuChakra,userPoints);
-            
+                cpuPoints= cpuWin(cpuChakra,userChakra,cpuPoints);
+                //System.out.println(cpuPoints);
+                userPoints= cpuLose(userChakra,cpuChakra,userPoints);
+                //System.out.println(userPoints);
+                if (userChakra==cpuChakra){
+                    System.out.println("Draw");
+                }
 
-            System.out.println("cpuPoint"+cpuPoints+"userPoints"+cpuPoints);
+                System.out.println("cpuPoint "+cpuPoints+" userPoints "+userPoints);
+
+                if (userPoints==5 || cpuPoints==5){
+                    gameLoop = false;
+                }
+            }
+            System.out.println("Want to play again\n[yes=1] [no=2]");
+            restart=keyboard.nextInt();
+            if(restart ==1){
+                userPoints = 0;
+                cpuPoints = 0;
+                gameLoop = true;
+            }else if (restart==2){
+                mainLoop = false;
+            }
         }
 
     }
