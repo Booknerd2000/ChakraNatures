@@ -19,7 +19,25 @@ public class Main {
         cpu = (int) (Math.random() * 5);
         cpuChakra = chakra[cpu];
 
+
         System.out.println(cpuChakra);
 
+        switch(cpuChakra){
+            case "fire":
+                
+                break;
+            case "wind":
+
+                break;
+            case "lightning":
+
+                break;
+            case "earth":
+
+                break;
+            case "water":
+
+                break;
+        }
     }
 }
