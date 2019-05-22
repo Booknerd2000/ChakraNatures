@@ -68,6 +68,7 @@ public class Main {
                 System.out.println("\033[0;31m"+"YOU LOSE"+"\033[49m");
             }
             System.out.println("\033[1;34m"+"Want to play again?\n[yes=1] or [no=2]"+"\033[49m");
+            System.out.println("Type your number twice. ex. \"1\"[enter]+\"1\"[enter] ");
             restart=keyboard.nextInt();
             if(restart ==1){
                 userPoints = 0;
